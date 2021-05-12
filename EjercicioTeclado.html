@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Teclado</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/teclado.css">
+
+    </head>
+    <body>
+        <form>
+        <div class="container">
+            <br/><br/>
+            <div class="row">
+                <div class="col">
+                    <input type="string" class="form-control" id="display">
+                </div>
+            </div>
+            <br/><br/>
+            <div class="row">
+                <div class="col">
+                    <button type="reset" class="btn btn-danger">Limpiar</button>
+                </div>
+            </div>
+            <br/><br/>
+        <script>
+
+            function escribir(c){
+                document.getElementById("display").value = document.getElementById("display").value + c;
+            }
+
+            document.write('<br/><br/>');
+            linea1 = ["q", "w", "e", "r","t", "y", "u", "i","o", "p"];
+            for(i=0; i<linea1.length; i++){
+                console.log(linea1[i]);
+                document.write('<input type="button" class="btn btn-primary bajar" value="'+linea1[i]+'" onclick="escribir(this.value)">');
+            }
+            document.write('<br/><br/>');
+            
+            linea2 = "asdfghjklñ";
+            for(i=0; i<linea2.length; i++){
+                console.log(linea2[i]);
+                document.write('<input type="button" class="btn btn-primary bajar" value="'+linea2[i]+'" onclick="escribir(this.value)">');
+            }
+            document.write('<br/><br/>');
+            linea3 = "zxcvbnm";
+            for(i=0; i<linea3.length; i++){
+                console.log(linea3[i]);
+                document.write('<input type="button" class="btn btn-primary bajar" value="'+linea3[i]+'" onclick="escribir(this.value)">');
+            }
+            document.write('<br/><br/>');
+
+            document.write('');
+        </script>
+
+        </form>
+    </body>
+</html>
